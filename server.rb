@@ -1,11 +1,20 @@
 require 'sinatra'
 
+
 get '/home' do
   erb :index
 end
 
+get '/' do
+  redirect to('/home')
+end
+
 get '/gallery' do
   erb :gallery
+end
+
+get '/portfolio' do
+  redirect to('/gallery')
 end
 
 get '/about_me' do
